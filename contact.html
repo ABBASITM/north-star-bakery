@@ -26,21 +26,25 @@
 
     <section aria-labelledby="form-heading">
       <h2 id="form-heading">Inquiry and Pre-Order Request</h2>
-      <form action="#" method="post">
+      <form action="#" method="post" id="request-form" novalidate>
+        <p id="form-status" role="status" tabindex="-1"></p>
         <fieldset>
           <legend>Your Contact Information</legend>
           <p>
             <label for="name">Full name *</label><br>
             <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name">
+            <span class="error-message" id="name-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="email">Email address *</label><br>
             <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+            <span class="error-message" id="email-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="phone">Phone number (optional)</label><br>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="204-555-0123" autocomplete="tel">
             <br><small>Format: 204-555-0123</small>
+            <span class="error-message" id="phone-error" aria-live="polite"></span>
           </p>
         </fieldset>
 
@@ -54,14 +58,21 @@
               <option value="event-order">Event or large order</option>
               <option value="general-question">General question</option>
             </select>
+            <span class="error-message" id="request-type-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="pickup-date">Pickup date *</label><br>
             <input type="date" id="pickup-date" name="pickup_date" required>
+            <span class="error-message" id="pickup-date-error" aria-live="polite"></span>
           </p>
           <p>
+            <span id="favorites-helper" hidden>
+              Your saved favorites: <strong id="favorites-text"></strong>
+              <button type="button" id="add-favorites">Add favorites to item details</button>
+            </span><br>
             <label for="item-details">Item details *</label><br>
             <textarea id="item-details" name="item_details" rows="5" cols="40" required minlength="5" maxlength="500" placeholder="Example: 1 Signature Loaf and a dozen chocolate chunk cookies"></textarea>
+            <span class="error-message" id="item-details-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="allergies">Allergy notes, if applicable</label><br>
@@ -108,5 +119,6 @@
       </ul>
     </nav>
   </footer>
+  <script src="scripts.js" defer></script>
 </body>
 </html>

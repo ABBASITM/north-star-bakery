@@ -29,14 +29,24 @@
       <img src="bakery-feature-small.jpg" alt="Trays of freshly baked cookies, filled shortbread, and glazed pastries on wooden display shelves" width="600">
     </picture>
 
+    <section aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading">Your Favorites</h2>
+      <p id="favorites-summary" aria-live="polite">You have not saved any favorites yet. Choose "Save to favorites" on any item below to build your pre-order list.</p>
+      <ul id="favorites-list"></ul>
+      <p>
+        <button type="button" id="clear-favorites" hidden>Clear favorites</button>
+      </p>
+      <p><a href="contact.html">Pre-order your favorites</a></p>
+    </section>
+
     <section aria-labelledby="breads-heading">
       <h2 id="breads-heading">Breads</h2>
       <img src="bakery-bread.jpg" alt="Rustic sourdough and seeded loaves with crackled golden crusts displayed behind a bakery glass case" width="400">
       <p>Crusty, slow-fermented loaves for sandwiches, soups, and sharing at the table.</p>
       <ul class="cards">
-        <li><h3>Signature Loaf</h3> <p>Our hand-shaped round loaf with a deep golden crust. About $8 to $10.</p></li>
-        <li><h3>Seeded Sourdough</h3> <p>Topped with sunflower and pumpkin seeds. About $7 to $9.</p></li>
-        <li><h3>Country White</h3> <p>Soft inside and lightly dusted with flour. About $5 to $7.</p></li>
+        <li data-product-id="signature-loaf"><h3>Signature Loaf</h3> <p>Our hand-shaped round loaf with a deep golden crust. About $8 to $10.</p></li>
+        <li data-product-id="seeded-sourdough"><h3>Seeded Sourdough</h3> <p>Topped with sunflower and pumpkin seeds. About $7 to $9.</p></li>
+        <li data-product-id="country-white"><h3>Country White</h3> <p>Soft inside and lightly dusted with flour. About $5 to $7.</p></li>
       </ul>
     </section>
 
@@ -44,9 +54,9 @@
       <h2 id="pastries-heading">Pastries and Cookies</h2>
       <p>Small-batch sweets that are perfect for a morning commute or a family treat box.</p>
       <ul class="cards">
-        <li><h3>Chocolate Chunk Cookies</h3> <p>Soft in the middle, crisp at the edges. About $2 to $3 each.</p></li>
-        <li><h3>Cream-Filled Shortbread</h3> <p>Buttery layers with a sweet filling. About $3 to $4 each.</p></li>
-        <li><h3>Glazed Rolls and Twists</h3> <p>Light, sweet, and baked fresh daily. About $3 to $5 each.</p></li>
+        <li data-product-id="chocolate-chunk-cookies"><h3>Chocolate Chunk Cookies</h3> <p>Soft in the middle, crisp at the edges. About $2 to $3 each.</p></li>
+        <li data-product-id="cream-filled-shortbread"><h3>Cream-Filled Shortbread</h3> <p>Buttery layers with a sweet filling. About $3 to $4 each.</p></li>
+        <li data-product-id="glazed-rolls-and-twists"><h3>Glazed Rolls and Twists</h3> <p>Light, sweet, and baked fresh daily. About $3 to $5 each.</p></li>
       </ul>
     </section>
 
@@ -54,8 +64,8 @@
       <h2 id="cakes-heading">Cakes and Event Orders</h2>
       <p>Planning a birthday, meeting, or family gathering? Ask about custom cakes and large pastry boxes.</p>
       <ul class="cards">
-        <li><h3>Celebration Cakes</h3> <p>Made to order. About $35 to $75, depending on size.</p></li>
-        <li><h3>Pastry Boxes for Groups</h3> <p>Mixed assortments for events. About $20 to $60.</p></li>
+        <li data-product-id="celebration-cakes"><h3>Celebration Cakes</h3> <p>Made to order. About $35 to $75, depending on size.</p></li>
+        <li data-product-id="pastry-boxes-for-groups"><h3>Pastry Boxes for Groups</h3> <p>Mixed assortments for events. About $20 to $60.</p></li>
       </ul>
       <p><a href="contact.html">Place a pre-order or ask a question</a></p>
     </section>
@@ -72,5 +82,6 @@
       </ul>
     </nav>
   </footer>
+  <script src="scripts.js" defer></script>
 </body>
 </html>

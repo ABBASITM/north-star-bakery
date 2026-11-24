@@ -196,3 +196,47 @@ footer nav a { color: var(--cream); }
   form fieldset { flex: 1 1 45%; }
   form > p { flex: 1 1 100%; }
 }
+
+/* Touchstone 4: interactive feature, validation feedback, and status messages */
+.favorite-button {
+  margin: 0.75rem 0 0;
+  width: 100%;
+}
+
+.favorite-button[aria-pressed="true"] {
+  color: var(--charcoal);
+  background-color: var(--peach);
+  border-color: var(--peach);
+}
+
+#favorites-list { padding-left: 1.25rem; }
+
+.error-message {
+  display: block;
+  margin-top: 0.35rem;
+  color: #8B1A1A;
+  font-weight: bold;
+}
+
+.error-message:empty { display: none; }
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #8B1A1A;
+  background-color: #FFF1F1;
+}
+
+.form-status {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  color: var(--charcoal);
+  background-color: var(--cream);
+  border: 2px solid var(--peach);
+  border-radius: 8px;
+}
+
+#favorites-helper { display: block; margin-bottom: 0.75rem; padding: 0.75rem; background-color: var(--cream); border: 2px dashed var(--peach); border-radius: 8px; }
+#favorites-helper[hidden] { display: none; }
+#favorites-helper button { margin-top: 0.5rem; }
